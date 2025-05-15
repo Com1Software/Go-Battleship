@@ -11,6 +11,7 @@ import (
 
 	"fmt"
 
+	"fyne.io/fyne/canvas"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
@@ -26,6 +27,12 @@ func main() {
 	w := a.NewWindow("Listening on " + xip + ":" + port)
 	tctl := 0
 	tc := 0
+	imgPath := "Icon.png" // Replace with the path to your image
+	resource, err := fyne.LoadResourceFromPath(imgPath)
+	if err != nil {
+		os.Exit(1)
+	}
+
 	memo := widget.NewEntry()
 	memo.SetPlaceHolder("Enter an IP address to sync with...")
 	memo.MultiLine = true               // Enable multiline for larger text fields
@@ -42,7 +49,10 @@ func main() {
 	inputvalue := widget.NewEntry()
 	inputvalue.SetPlaceHolder("Enter Value...")
 
-	button := widget.NewButton("Cmd", func() {
+	image := canvas.NewImageFromResource(resource)
+	image.FillMode = canvas.ImageFillStretch
+
+	button := widget.NewButton("", func() {
 	})
 
 	helloButton := widget.NewButton("Connect", func() {
@@ -67,8 +77,9 @@ func main() {
 
 	inputContainer := container.NewGridWrap(fyne.NewSize(165, 40), input)
 	inputContainerValue := container.NewGridWrap(fyne.NewSize(165, 40), inputvalue)
-	buttonContainer := container.NewGridWrap(fyne.NewSize(50, 40), button)
-	layoutContainer := container.NewHBox(buttonContainer, inputContainer, inputContainerValue)
+	buttonContainer1 := container.NewGridWrap(fyne.NewSize(50, 40), button)
+	buttonContainer2 := container.NewGridWrap(fyne.NewSize(50, 40), button)
+	layoutContainer := container.NewHBox(buttonContainer1, buttonContainer2, inputContainer, inputContainerValue)
 
 	w.SetContent(container.NewVBox(
 		memo,            // Add the memo field
@@ -77,7 +88,7 @@ func main() {
 		helloButton,     // Add the "Say Hello" button
 		exitButton,      // Add the "Exit" button
 	))
-	w.Resize(fyne.NewSize(400, 300))
+	w.Resize(fyne.NewSize(1400, 1300))
 
 	go func() {
 		for {
