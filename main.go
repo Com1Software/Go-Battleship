@@ -8,6 +8,7 @@ import (
 	"log"
 	"net"
 	"net/http"
+	"os"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
@@ -21,6 +22,16 @@ func main() {
 	port := "8080"
 	a := app.New()
 	w := a.NewWindow("Listening on " + xip + ":" + port)
+
+	memo := widget.NewEntry()
+	memo.SetPlaceHolder("Enter an IP address to sync with...")
+	memo.MultiLine = true // Enable multiline for larger text fields
+	memoa := container.NewGridWrap(fyne.NewSize(440, 40), memo)
+
+	memo1 := widget.NewEntry()
+	memo1.SetPlaceHolder("...")
+	memo1.MultiLine = true // Enable multiline for larger text fields
+	memo1a := container.NewGridWrap(fyne.NewSize(440, 40), memo1)
 
 	button1a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
@@ -522,8 +533,14 @@ func main() {
 		buttonContainer4j, buttonContainer5j, buttonContainer6j, buttonContainer7j, buttonContainer8j,
 		buttonContainer9j, buttonContainer10j)
 
+	exitButton := widget.NewButton("Exit", func() {
+		os.Exit(0)
+	})
+	exitButtona := container.NewGridWrap(fyne.NewSize(440, 40), exitButton)
 	w.Resize(fyne.NewSize(1400, 1300))
 	w.SetContent(container.NewVBox(
+		memoa,
+		memo1a,
 		layoutContainera,
 		layoutContainerb,
 		layoutContainerc,
@@ -533,7 +550,9 @@ func main() {
 		layoutContainerg,
 		layoutContainerh,
 		layoutContaineri,
-		layoutContainerj))
+		layoutContainerj,
+		exitButtona,
+	))
 	w.ShowAndRun()
 }
 
