@@ -26,12 +26,75 @@ func main() {
 	memo := widget.NewEntry()
 	memo.SetPlaceHolder("Enter an IP address to sync with...")
 	memo.MultiLine = true // Enable multiline for larger text fields
-	memoa := container.NewGridWrap(fyne.NewSize(440, 40), memo)
+	memoa := container.NewGridWrap(fyne.NewSize(480, 40), memo)
 
 	memo1 := widget.NewEntry()
 	memo1.SetPlaceHolder("...")
 	memo1.MultiLine = true // Enable multiline for larger text fields
-	memo1a := container.NewGridWrap(fyne.NewSize(440, 40), memo1)
+	memo1a := container.NewGridWrap(fyne.NewSize(480, 40), memo1)
+
+	button := NewCustomButton("", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button1 := NewCustomButton("1", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button2 := NewCustomButton("2", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button3 := NewCustomButton("3", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button4 := NewCustomButton("4", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button5 := NewCustomButton("5", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button6 := NewCustomButton("6", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button7 := NewCustomButton("7", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button8 := NewCustomButton("8", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button9 := NewCustomButton("9", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button10 := NewCustomButton("10", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0a := NewCustomButton("A", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0b := NewCustomButton("B", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0c := NewCustomButton("C", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0d := NewCustomButton("D", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0e := NewCustomButton("E", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0f := NewCustomButton("F", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0g := NewCustomButton("G", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0h := NewCustomButton("H", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0i := NewCustomButton("I", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
+	button0j := NewCustomButton("J", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
 
 	button1a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
@@ -383,6 +446,29 @@ func main() {
 		println("Button clicked!")
 	}, ctla)
 
+	buttonContainer := container.NewGridWrap(fyne.NewSize(40, 40), button)
+	buttonContainer1 := container.NewGridWrap(fyne.NewSize(40, 40), button1)
+	buttonContainer2 := container.NewGridWrap(fyne.NewSize(40, 40), button2)
+	buttonContainer3 := container.NewGridWrap(fyne.NewSize(40, 40), button3)
+	buttonContainer4 := container.NewGridWrap(fyne.NewSize(40, 40), button4)
+	buttonContainer5 := container.NewGridWrap(fyne.NewSize(40, 40), button5)
+	buttonContainer6 := container.NewGridWrap(fyne.NewSize(40, 40), button6)
+	buttonContainer7 := container.NewGridWrap(fyne.NewSize(40, 40), button7)
+	buttonContainer8 := container.NewGridWrap(fyne.NewSize(40, 40), button8)
+	buttonContainer9 := container.NewGridWrap(fyne.NewSize(40, 40), button9)
+	buttonContainer10 := container.NewGridWrap(fyne.NewSize(40, 40), button10)
+
+	buttonContainer0a := container.NewGridWrap(fyne.NewSize(40, 40), button0a)
+	buttonContainer0b := container.NewGridWrap(fyne.NewSize(40, 40), button0b)
+	buttonContainer0c := container.NewGridWrap(fyne.NewSize(40, 40), button0c)
+	buttonContainer0d := container.NewGridWrap(fyne.NewSize(40, 40), button0d)
+	buttonContainer0e := container.NewGridWrap(fyne.NewSize(40, 40), button0e)
+	buttonContainer0f := container.NewGridWrap(fyne.NewSize(40, 40), button0f)
+	buttonContainer0g := container.NewGridWrap(fyne.NewSize(40, 40), button0g)
+	buttonContainer0h := container.NewGridWrap(fyne.NewSize(40, 40), button0h)
+	buttonContainer0i := container.NewGridWrap(fyne.NewSize(40, 40), button0i)
+	buttonContainer0j := container.NewGridWrap(fyne.NewSize(40, 40), button0j)
+
 	buttonContainer1a := container.NewGridWrap(fyne.NewSize(40, 40), button1a)
 	buttonContainer2a := container.NewGridWrap(fyne.NewSize(40, 40), button2a)
 	buttonContainer3a := container.NewGridWrap(fyne.NewSize(40, 40), button3a)
@@ -493,54 +579,59 @@ func main() {
 	buttonContainer9j := container.NewGridWrap(fyne.NewSize(40, 40), button9j)
 	buttonContainer10j := container.NewGridWrap(fyne.NewSize(40, 40), button10j)
 
-	layoutContainera := container.NewHBox(buttonContainer1a, buttonContainer2a, buttonContainer3a,
+	layoutContainer := container.NewHBox(buttonContainer, buttonContainer0a, buttonContainer0b, buttonContainer0c,
+		buttonContainer0d, buttonContainer0e, buttonContainer0f, buttonContainer0g, buttonContainer0h,
+		buttonContainer0i, buttonContainer0j)
+
+	layoutContainera := container.NewHBox(buttonContainer1, buttonContainer1a, buttonContainer2a, buttonContainer3a,
 		buttonContainer4a, buttonContainer5a, buttonContainer6a, buttonContainer7a, buttonContainer8a,
 		buttonContainer9a, buttonContainer10a)
 
-	layoutContainerb := container.NewHBox(buttonContainer1b, buttonContainer2b, buttonContainer3b,
+	layoutContainerb := container.NewHBox(buttonContainer2, buttonContainer1b, buttonContainer2b, buttonContainer3b,
 		buttonContainer4b, buttonContainer5b, buttonContainer6b, buttonContainer7b, buttonContainer8b,
 		buttonContainer9b, buttonContainer10b)
 
-	layoutContainerc := container.NewHBox(buttonContainer1c, buttonContainer2c, buttonContainer3c,
+	layoutContainerc := container.NewHBox(buttonContainer3, buttonContainer1c, buttonContainer2c, buttonContainer3c,
 		buttonContainer4c, buttonContainer5c, buttonContainer6c, buttonContainer7c, buttonContainer8c,
 		buttonContainer9c, buttonContainer10c)
 
-	layoutContainerd := container.NewHBox(buttonContainer1d, buttonContainer2d, buttonContainer3d,
+	layoutContainerd := container.NewHBox(buttonContainer4, buttonContainer1d, buttonContainer2d, buttonContainer3d,
 		buttonContainer4d, buttonContainer5d, buttonContainer6d, buttonContainer7d, buttonContainer8d,
 		buttonContainer9d, buttonContainer10d)
 
-	layoutContainere := container.NewHBox(buttonContainer1e, buttonContainer2e, buttonContainer3e,
+	layoutContainere := container.NewHBox(buttonContainer5, buttonContainer1e, buttonContainer2e, buttonContainer3e,
 		buttonContainer4e, buttonContainer5e, buttonContainer6e, buttonContainer7e, buttonContainer8e,
 		buttonContainer9e, buttonContainer10e)
 
-	layoutContainerf := container.NewHBox(buttonContainer1f, buttonContainer2f, buttonContainer3f,
+	layoutContainerf := container.NewHBox(buttonContainer6, buttonContainer1f, buttonContainer2f, buttonContainer3f,
 		buttonContainer4f, buttonContainer5f, buttonContainer6f, buttonContainer7f, buttonContainer8f,
 		buttonContainer9f, buttonContainer10f)
 
-	layoutContainerg := container.NewHBox(buttonContainer1g, buttonContainer2g, buttonContainer3g,
+	layoutContainerg := container.NewHBox(buttonContainer7, buttonContainer1g, buttonContainer2g, buttonContainer3g,
 		buttonContainer4g, buttonContainer5g, buttonContainer6g, buttonContainer7g, buttonContainer8g,
 		buttonContainer9g, buttonContainer10g)
 
-	layoutContainerh := container.NewHBox(buttonContainer1h, buttonContainer2h, buttonContainer3h,
+	layoutContainerh := container.NewHBox(buttonContainer8, buttonContainer1h, buttonContainer2h, buttonContainer3h,
 		buttonContainer4h, buttonContainer5h, buttonContainer6h, buttonContainer7h, buttonContainer8h,
 		buttonContainer9h, buttonContainer10h)
 
-	layoutContaineri := container.NewHBox(buttonContainer1i, buttonContainer2i, buttonContainer3i,
+	layoutContaineri := container.NewHBox(buttonContainer9, buttonContainer1i, buttonContainer2i, buttonContainer3i,
 		buttonContainer4i, buttonContainer5i, buttonContainer6i, buttonContainer7i, buttonContainer8i,
 		buttonContainer9i, buttonContainer10i)
 
-	layoutContainerj := container.NewHBox(buttonContainer1j, buttonContainer2j, buttonContainer3j,
+	layoutContainerj := container.NewHBox(buttonContainer10, buttonContainer1j, buttonContainer2j, buttonContainer3j,
 		buttonContainer4j, buttonContainer5j, buttonContainer6j, buttonContainer7j, buttonContainer8j,
 		buttonContainer9j, buttonContainer10j)
 
 	exitButton := widget.NewButton("Exit", func() {
 		os.Exit(0)
 	})
-	exitButtona := container.NewGridWrap(fyne.NewSize(440, 40), exitButton)
+	exitButtona := container.NewGridWrap(fyne.NewSize(480, 40), exitButton)
 	w.Resize(fyne.NewSize(1400, 1300))
 	w.SetContent(container.NewVBox(
 		memoa,
 		memo1a,
+		layoutContainer,
 		layoutContainera,
 		layoutContainerb,
 		layoutContainerc,
