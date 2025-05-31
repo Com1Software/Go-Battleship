@@ -9,6 +9,7 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"time"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
@@ -32,6 +33,23 @@ func main() {
 	memo1.SetPlaceHolder("...")
 	memo1.MultiLine = true // Enable multiline for larger text fields
 	memo1a := container.NewGridWrap(fyne.NewSize(480, 40), memo1)
+
+	helloButton := widget.NewButton("Connect", func() {
+		url := memo.Text
+		go func() {
+			for {
+				data := ReadURL(url)
+
+				// Use fyne.Do to safely update the UI from a goroutine
+				fyne.Do(func() {
+					memo1.SetText(data)
+				})
+
+				time.Sleep(1 * time.Second) // Adjust the refresh rate as needed
+			}
+		}()
+
+	})
 
 	button := NewCustomButton("", color.RGBA{0, 0, 0, 0}, func() {
 	}, ctla)
@@ -630,6 +648,7 @@ func main() {
 	w.Resize(fyne.NewSize(1400, 1300))
 	w.SetContent(container.NewVBox(
 		memoa,
+		helloButton,
 		memo1a,
 		layoutContainer,
 		layoutContainera,
