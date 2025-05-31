@@ -22,7 +22,7 @@ func main() {
 	port := "8080"
 	a := app.New()
 	w := a.NewWindow("Listening on " + xip + ":" + port)
-
+	ctla := true
 	memo := widget.NewEntry()
 	memo.SetPlaceHolder("Enter an IP address to sync with...")
 	memo.MultiLine = true // Enable multiline for larger text fields
@@ -35,353 +35,353 @@ func main() {
 
 	button1a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10a := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10b := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10c := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10d := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10e := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10f := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10g := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10h := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10i := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button1j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button2j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button3j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button4j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button5j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button6j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button7j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button8j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	button9j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 	button10j := NewCustomButton("", color.RGBA{0, 0, 255, 255}, func() {
 		println("Button clicked!")
-	})
+	}, ctla)
 
 	buttonContainer1a := container.NewGridWrap(fyne.NewSize(40, 40), button1a)
 	buttonContainer2a := container.NewGridWrap(fyne.NewSize(40, 40), button2a)
@@ -565,7 +565,7 @@ type CustomButton struct {
 	bgRect   *canvas.Rectangle
 }
 
-func NewCustomButton(text string, bgColor color.Color, onTapped func()) *CustomButton {
+func NewCustomButton(text string, bgColor color.Color, onTapped func(), ctl bool) *CustomButton {
 	btn := &CustomButton{text: text, color: bgColor, onTapped: onTapped}
 	btn.ExtendBaseWidget(btn)
 	return btn
