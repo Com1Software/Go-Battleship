@@ -27,7 +27,7 @@ func main() {
 	memo := widget.NewEntry()
 	memo.SetPlaceHolder("Enter an IP address to sync with...")
 	memo.MultiLine = true // Enable multiline for larger text fields
-	memoa := container.NewGridWrap(fyne.NewSize(480, 40), memo)
+	memoa := container.NewGridWrap(fyne.NewSize(380, 40), memo)
 
 	memo1 := widget.NewEntry()
 	memo1.SetPlaceHolder("...")
@@ -50,6 +50,9 @@ func main() {
 		}()
 
 	})
+	hellobuttonContainer := container.NewGridWrap(fyne.NewSize(100, 40), helloButton)
+
+	hellolayoutContainer := container.NewHBox(memoa, hellobuttonContainer)
 
 	button := NewCustomButton("", color.RGBA{0, 0, 0, 0}, func() {
 	}, ctla)
@@ -647,8 +650,7 @@ func main() {
 	exitButtona := container.NewGridWrap(fyne.NewSize(480, 40), exitButton)
 	w.Resize(fyne.NewSize(1400, 1300))
 	w.SetContent(container.NewVBox(
-		memoa,
-		helloButton,
+		hellolayoutContainer,
 		memo1a,
 		layoutContainer,
 		layoutContainera,
