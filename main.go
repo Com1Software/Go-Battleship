@@ -28,6 +28,17 @@ func main() {
 	tctl := 0
 	tc := 0
 
+	carrier := NewCustomButton("Aircraft Carrier", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+	battleship := NewCustomButton("Battleship", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+	destroyer := NewCustomButton("Destroyer", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+	submarine := NewCustomButton("Submarine", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+	patrolboat := NewCustomButton("Patrol Boat", color.RGBA{0, 0, 0, 0}, func() {
+	}, ctla)
+
 	exitButton := widget.NewButton("Exit", func() {
 		os.Exit(0)
 	})
@@ -476,6 +487,12 @@ func main() {
 		println("Button clicked!")
 	}, ctla)
 
+	carrierContainer := container.NewGridWrap(fyne.NewSize(110, 40), carrier)
+	battleshipContainer := container.NewGridWrap(fyne.NewSize(90, 40), battleship)
+	destroyerContainer := container.NewGridWrap(fyne.NewSize(90, 40), destroyer)
+	submarineContainer := container.NewGridWrap(fyne.NewSize(90, 40), submarine)
+	patrolboatContainer := container.NewGridWrap(fyne.NewSize(90, 40), patrolboat)
+
 	buttonContainer := container.NewGridWrap(fyne.NewSize(40, 40), button)
 	buttonContainer1 := container.NewGridWrap(fyne.NewSize(40, 40), button1)
 	buttonContainer2 := container.NewGridWrap(fyne.NewSize(40, 40), button2)
@@ -653,6 +670,8 @@ func main() {
 		buttonContainer4j, buttonContainer5j, buttonContainer6j, buttonContainer7j, buttonContainer8j,
 		buttonContainer9j, buttonContainer10j)
 
+	shipContainer := container.NewHBox(carrierContainer, battleshipContainer, destroyerContainer, submarineContainer, patrolboatContainer)
+
 	w.Resize(fyne.NewSize(1200, 600))
 	w.SetContent(container.NewVBox(
 		hellolayoutContainer,
@@ -668,6 +687,7 @@ func main() {
 		layoutContainerh,
 		layoutContaineri,
 		layoutContainerj,
+		shipContainer,
 	))
 	go func() {
 		for {
