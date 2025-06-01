@@ -648,7 +648,7 @@ func main() {
 		os.Exit(0)
 	})
 	exitButtona := container.NewGridWrap(fyne.NewSize(480, 40), exitButton)
-	w.Resize(fyne.NewSize(1000, 300))
+	w.Resize(fyne.NewSize(1200, 500))
 	w.SetContent(container.NewVBox(
 		hellolayoutContainer,
 		memo1a,
