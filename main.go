@@ -19,11 +19,14 @@ import (
 )
 
 func main() {
+	agent := SSE()
 	xip := fmt.Sprintf("%s", GetOutboundIP())
 	port := "8080"
 	a := app.New()
 	w := a.NewWindow("Listening on " + xip + ":" + port)
 	ctla := true
+	tctl := 0
+	tc := 0
 	memo := widget.NewEntry()
 	memo.SetPlaceHolder("Enter an IP address to sync with...")
 	memo.MultiLine = true // Enable multiline for larger text fields
@@ -665,6 +668,31 @@ func main() {
 		layoutContainerj,
 		exitButtona,
 	))
+	go func() {
+		for {
+			switch {
+			case tctl == 0:
+				time.Sleep(time.Second * 1)
+			case tctl == 1:
+				time.Sleep(time.Second * -1)
+				tc++
+				fmt.Printf("loop count = %d\n", tc)
+			}
+			dtime := fmt.Sprintf("%s", time.Now())
+			msg := "<message>"
+			msg = msg + "<controller>Connected : " + fmt.Sprint(GetOutboundIP()) + "</controller>"
+			msg = msg + "<date_time>" + dtime[0:24] + "</date_time>"
+
+			msg = msg + "/<message>\n"
+			event := msg
+			//		event := fmt.Sprintf("Controller=%s Time=%v\n", GetOutboundIP(), dtime[0:24])
+			agent.Notifier <- []byte(event)
+		}
+	}()
+
+	go fmt.Printf("Listening at  : %s Port : %s\n", xip, port)
+	go http.ListenAndServe(":"+port, agent)
+
 	w.ShowAndRun()
 }
 
