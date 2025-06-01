@@ -27,10 +27,16 @@ func main() {
 	ctla := true
 	tctl := 0
 	tc := 0
+
+	exitButton := widget.NewButton("Exit", func() {
+		os.Exit(0)
+	})
+	exitButtona := container.NewGridWrap(fyne.NewSize(40, 40), exitButton)
+
 	memo := widget.NewEntry()
 	memo.SetPlaceHolder("Enter an IP address to sync with...")
 	memo.MultiLine = true // Enable multiline for larger text fields
-	memoa := container.NewGridWrap(fyne.NewSize(380, 40), memo)
+	memoa := container.NewGridWrap(fyne.NewSize(350, 40), memo)
 
 	memo1 := widget.NewEntry()
 	memo1.SetPlaceHolder("...")
@@ -53,9 +59,9 @@ func main() {
 		}()
 
 	})
-	hellobuttonContainer := container.NewGridWrap(fyne.NewSize(100, 40), helloButton)
+	hellobuttonContainer := container.NewGridWrap(fyne.NewSize(80, 40), helloButton)
 
-	hellolayoutContainer := container.NewHBox(memoa, hellobuttonContainer)
+	hellolayoutContainer := container.NewHBox(exitButtona, memoa, hellobuttonContainer)
 
 	button := NewCustomButton("", color.RGBA{0, 0, 0, 0}, func() {
 	}, ctla)
@@ -647,11 +653,7 @@ func main() {
 		buttonContainer4j, buttonContainer5j, buttonContainer6j, buttonContainer7j, buttonContainer8j,
 		buttonContainer9j, buttonContainer10j)
 
-	exitButton := widget.NewButton("Exit", func() {
-		os.Exit(0)
-	})
-	exitButtona := container.NewGridWrap(fyne.NewSize(480, 40), exitButton)
-	w.Resize(fyne.NewSize(1200, 500))
+	w.Resize(fyne.NewSize(1200, 600))
 	w.SetContent(container.NewVBox(
 		hellolayoutContainer,
 		memo1a,
@@ -666,7 +668,6 @@ func main() {
 		layoutContainerh,
 		layoutContaineri,
 		layoutContainerj,
-		exitButtona,
 	))
 	go func() {
 		for {
